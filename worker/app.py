@@ -3,7 +3,7 @@ from rabbit_client import RabbitClient
 from db import SessionLocal
 from printer_added import handle_printer_added
 
-RABBIT_URL = "amqps://ykcdgrfj:OCn_ZAIrZxkwvRpWUY2ZUGKLUiQPDBAm@kangaroo.rmq.cloudamqp.com/ykcdgrfj"
+RABBIT_URL = ""
 QUEUE = "printer_event"
 RETRY_DELAY = 5  # segundos
 
