@@ -1,0 +1,140 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fundo geral */
+body {
+    background: linear-gradient(135deg, #0f4c75, #3282b8);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container central */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+.container h1 {
+    color: #0f4c75;
+    margin-bottom: 25px;
+}
+
+/* Lista */
+.container ul {
+    list-style: none;
+}
+
+/* Itens da lista */
+.container ul li {
+    margin: 15px 0;
+}
+
+/* Links como botões */
+.container ul li a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    background-color: #3282b8;
+    color: white;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* Hover */
+.container ul li a:hover {
+    background-color: #0f4c75;
+    transform: scale(1.03);
+}
+
+/* Formulário */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form label {
+    text-align: left;
+    font-weight: bold;
+    color: #0f4c75;
+}
+
+.form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form input:focus {
+    outline: none;
+    border-color: #3282b8;
+}
+
+/* Botão */
+.form button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #3282b8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.form button:hover {
+    background-color: #0f4c75;
+}
+
+/* Flash messages */
+.flash-messages {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.flash {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.flash.error {
+    background-color: #ffe5e5;
+    color: #c0392b;
+}
+
+.flash.success {
+    background-color: #e8f8f5;
+    color: #148f77;
+}
+
+/* Link */
+.link {
+    margin-top: 20px;
+}
+
+.link a {
+    text-decoration: none;
+    color: #3282b8;
+    font-weight: bold;
+}
+
+.link a:hover {
+    color: #0f4c75;
+}

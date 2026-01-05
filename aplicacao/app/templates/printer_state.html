@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ printer.name }}</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/state.css') }}">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Cabeçalho da impressora -->
+    <div class="printer-header">
+      <h1>{{ printer.name }}</h1>
+      <span class="printer-uuid">{{ printer.printer_uuid }}</span>
+    </div>
+
+    {% if states %}
+      <ul class="state-list">
+        {% for s in states %}
+          <li class="state-card state-{{ s.state|lower|replace(' ', '-') }}">
+            
+            <div class="state-main">
+              <span class="state-label">Estado</span>
+              <span class="state-value">
+                {{ s.state or "—" }}
+              </span>
+            </div>
+
+            <div class="state-info">
+              <div><strong>Mensagem:</strong> {{ s.state_message or "—" }}</div>
+              <div><strong>Aceita jobs:</strong> {{ "Sim" if s.is_accepting_jobs else "Não" }}</div>
+              <div><strong>Fila:</strong> {{ s.queued_job_count }}</div>
+            </div>
+
+            <div class="timestamp">
+              Atualizado em: {{ s.created_at }}
+            </div>
+
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="empty-state">
+        Essa impressora ainda não possui informações de estado.
+      </p>
+    {% endif %}
+
+    <a class="back-link" href="{{ url_for('home.list_printers') }}">
+      ← Voltar para Impressoras
+    </a>
+
+  </div>
+
+</body>
+</html>

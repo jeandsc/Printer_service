@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Print Jobs</title>
+
+    <!-- CSS do tema / monitoramento -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/state.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="page-title">Print Jobs</h1>
+
+        {% if jobs %}
+            <ul class="job-list">
+                {% for j in jobs %}
+                    <li class="job-card job-{{ j.state|lower|replace(' ', '-') }}">
+                        
+                        <div class="job-main">
+                            <span class="job-file">{{ j.file_name }}</span>
+                            <span class="job-state">{{ j.state }}</span>
+                        </div>
+
+                        <div class="job-info">
+                            <div><strong>Impressora:</strong> {{ j.printer_id }}</div>
+                        </div>
+
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="empty-state">Nenhum job encontrado.</p>
+        {% endif %}
+
+        <a class="back-link" href="{{ url_for('home.home') }}">
+            ← Voltar para Home
+        </a>
+
+    </div>
+
+</body>
+</html>

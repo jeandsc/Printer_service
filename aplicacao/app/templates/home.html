@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Sistema de Impressão</title>
+
+    <!-- Link do CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/printer.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bem-vindo ao Sistema de Monitoramento de Impressoras</h1>
+        
+        <ul>
+            <li><a href="{{ url_for('auth.login_page') }}">Login</a></li>
+            <li><a href="{{ url_for('auth.register_page') }}">Registrar</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+/* Base */
+body {
+    background: linear-gradient(135deg, #0f4c75, #3282b8);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Cabeçalho da impressora */
+.printer-header {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.printer-header h1 {
+    margin: 0;
+    color: #0f4c75;
+}
+
+.printer-uuid {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Lista de estados */
+.state-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Card de estado */
+.state-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    border-left: 8px solid #ccc;
+}
+
+/* Destaque do estado */
+.state-main {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.state-label {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.state-value {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #0f4c75;
+}
+
+/* Informações secundárias */
+.state-info {
+    margin-top: 10px;
+    color: #333;
+}
+
+.state-info div {
+    margin-bottom: 5px;
+}
+
+/* Timestamp */
+.timestamp {
+    margin-top: 15px;
+    font-size: 0.85em;
+    color: #777;
+    text-align: right;
+}
+
+/* Estados com cores (monitoramento visual) */
+.state-online,
+.state-idle,
+.state-ready {
+    border-left-color: #2ecc71;
+}
+
+.state-printing {
+    border-left-color: #f1c40f;
+}
+
+.state-error,
+.state-offline {
+    border-left-color: #e74c3c;
+}
+
+/* Estado vazio */
+.empty-state {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #555;
+}
+
+/* Voltar */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Jobs */
+.page-title {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.job-list {
+    list-style: none;
+    padding: 0;
+}
+
+.job-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    border-left: 8px solid #ccc;
+}
+
+/* Cabeçalho do job */
+.job-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job-file {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0f4c75;
+}
+
+.job-state {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Estados visuais */
+.job-printing .job-state {
+    background-color: #f1c40f;
+}
+
+.job-completed .job-state,
+.job-done .job-state {
+    background-color: #2ecc71;
+}
+
+.job-error .job-state,
+.job-failed .job-state {
+    background-color: #e74c3c;
+}
+
+.job-queued .job-state,
+.job-pending .job-state {
+    background-color: #3498db;
+}
+
+/* Info secundária */
+.job-info {
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Estado vazio */
+.empty-state {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #555;
+}

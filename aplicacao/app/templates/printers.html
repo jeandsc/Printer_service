@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Impressoras</title>
+
+    <!-- CSS do tema -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/printer.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Impressoras</h1>
+
+        <ul class="printer-list">
+            {% for p in printers %}
+            <li class="printer-item">
+                <a href="{{ url_for('home.printer_state', printer_id=p.id) }}">
+                    <strong>{{ p.name }}</strong><br>
+                    <span class="printer-id">{{ p.printer_uuid }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <p class="link">
+            <a href="{{ url_for('home.home_page') }}">← Voltar</a>
+        </p>
+    </div>
+
+</body>
+</html>
