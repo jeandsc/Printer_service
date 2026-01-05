@@ -5,7 +5,7 @@ from core.rabbit.rabbit_client import RabbitClient
 from core.transforms.event_builder import EventBuilder
 from core.rabbit.publisher import RabbitPublisher
 from time import sleep
-url = "amqps://ykcdgrfj:OCn_ZAIrZxkwvRpWUY2ZUGKLUiQPDBAm@kangaroo.rmq.cloudamqp.com/ykcdgrfj"
+url = ""
 cups_client = CupsClient()
 printer_service = PrinterService(cups_client)
 job_service = JobService(cups_client)
