@@ -2,7 +2,7 @@ from core.rabbit.rabbit_client import RabbitClient  # seu arquivo com a classe
 import time
 
 # Substitua com a URL do seu CloudAMQP
-URL = "amqps://ykcdgrfj:OCn_ZAIrZxkwvRpWUY2ZUGKLUiQPDBAm@kangaroo.rmq.cloudamqp.com/ykcdgrfj"
+URL = ""
 QUEUE = "fila_teste"
 
 def main():
